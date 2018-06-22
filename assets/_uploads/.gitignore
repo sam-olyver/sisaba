@@ -1,0 +1,13 @@
+# DATA FORMAT # 
+###############
+*.xml
+*.json
+*.pdf
+*.xlsx
+*.rar
+*.zip
+*,xls
+*.doc
+*.docx
+*.png
+*.jpg
