@@ -27,7 +27,7 @@
 						<label>Abastecimento</label>
 						<select class="form-control" name="abastecimento">
 							<option disabled selected>Selecione uma opção</option>
-							<?php $modelo->getDataAbastecimento(); ?>
+							<?php $modelo->getDataAbastecimento(false); ?>
 						</select>
 					</div>
 					<div class="form-group">

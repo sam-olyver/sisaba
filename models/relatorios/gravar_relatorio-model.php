@@ -29,7 +29,19 @@
 			
 			return $fk['id_tipo_alimento'];
 		}
+		
+		public function getAbastecimento($key)
+		{
+			if( empty($key) )
+				return;
 			
+			$stm = "SELECT aba FROM abastecimento WHERE id_abastecimento = ?";
+			$query = $this->db->query($stm, array($key));
+			$abastecimento = $query->fetchAll(PDO::FETCH_ASSOC);
+			
+			return $abastecimento[0]['aba']; 
+		}
+		
 		public function salvarRelatorio()
 		{
 			if($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST))

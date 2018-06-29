@@ -74,6 +74,10 @@ class RelatoriosController extends MainController
 		
 		$gravar->salvarRelatorio();
         
+		$header = $modelo->obj->getCabecalho();
+		$fk = $header['abastecimento'];
+		$aba = $gravar->getAbastecimento($fk);
+		
 		require ABSPATH . '/views/_includes/header.php';
 		require ABSPATH . '/views/_includes/menu.php';
         require ABSPATH . "/views/relatorios/{$modelo->getTable()}.php";

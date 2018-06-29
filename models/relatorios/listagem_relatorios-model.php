@@ -20,7 +20,7 @@ class ListagemRelatoriosModel extends MainModel
 			}
 			else
 			{
-				echo "<option value='{$res['abastecimento']}'>{$res['aba']}/{$res['ano']}</option>";
+				echo "<option value='{$res['aba']}'>{$res['aba']}/{$res['ano']}</option>";
 			}
 		}
 	}
@@ -1855,9 +1855,9 @@ class ListagemRelatoriosModel extends MainModel
 										</th>
 									</tr>
 								";
-					echo $header;
+			echo $header;
 					
-					$relatorio_data_html = array();
+			$relatorio_data_html = array();
 			
 			foreach($this->totalSimulado() as $data_simulado)
 			{
@@ -1872,27 +1872,26 @@ class ListagemRelatoriosModel extends MainModel
 			
 			foreach($this->totalExplodido() as $data_explodido)
 			{
-				$cont = 0;
-				for($i = 0; $i < count($relatorio_data_html); $i++ )
+				if( search_for_value($data_explodido['alimento'], $relatorio_data_html) ) 
 				{
-					if($relatorio_data_html[$i]['alimento'] == $data_explodido['alimento'])
-					{
-						$relatorio_data_html[$i]['necessaria'] += $data_explodido['prevista'];
-						$relatorio_data_html[$i]['ajustada'] += $data_explodido['explodido'];
-						$cont++;
-					}
+					$key = array_search($data_explodido['alimento'], array_column($relatorio_data_html, 'alimento') );
 					
-					if($cont == count($relatorio_data_html) )
+					if( array_key_exists($key, $relatorio_data_html) && $relatorio_data_html[$key]['alimento'] == $data_explodido['alimento'] )
 					{
-						$relatorio_data_html[] = array(
-						'alimentos' => $data_explodido['alimento'],
-						'simulado' => 0,
-						'explodido' => $data_explodido['prevista'],
-						'entregue' => 0
-						);
+						$relatorio_data_html[$key]['necessaria'] += $data_explodido['prevista'];
+						$relatorio_data_html[$key]['ajustada'] += $data_explodido['explodido'];
 					}
 				}
-				
+				else
+				{
+					$relatorio_data_html[] = array(
+						'alimento' => $data_explodido['alimento'],
+						'simulado' => 0,
+						'necessaria' => $data_explodido['prevista'],
+						'ajustada' => 0,
+						'porcentagem' => 0
+					);
+				}
 				
 			}
 					
@@ -1939,61 +1938,58 @@ class ListagemRelatoriosModel extends MainModel
 			foreach($this->totalSimulado() as $data_simulado)
 			{
 				$relatorio_data_html[] = array(
-				'alimento' => $data_simulado['alimento'],
-				'simulado' => $data_simulado['simulado'],
-				'explodido' => 0,
-				'entregue' => 0
+					'alimento' => $data_simulado['alimento'],
+					'simulado' => $data_simulado['simulado'],
+					'explodido' => 0,
+					'entregue' => 0
 				);	
 			}
 			
 			foreach($this->totalExplodido() as $data_explodido)
 			{
-				$cont = 0;
-				for($i = 0; $i < count($relatorio_data_html); $i++ )
+				if( search_for_value($data_explodido['alimento'], $relatorio_data_html) ) 
 				{
-					if($relatorio_data_html[$i]['alimento'] == $data_explodido['alimento'])
-					{
-						$relatorio_data_html[$i]['explodido'] += $data_explodido['explodido'];
-						$cont++;
-					}
+					$key = array_search($data_explodido['alimento'], array_column($relatorio_data_html, 'alimento') );
 					
-					if($cont == count($relatorio_data_html) )
+					if( array_key_exists($key, $relatorio_data_html) && $relatorio_data_html[$key]['alimento'] == $data_explodido['alimento'] )
 					{
-						$relatorio_data_html[] = array(
-						'alimentos' => $data_explodido['alimento'],
+						$relatorio_data_html[$key]['explodido'] += $data_explodido['explodido'];
+					}
+				}
+				else
+				{
+					$relatorio_data_html[] = array(
+						'alimento' => $data_explodido['alimento'],
 						'simulado' => 0,
 						'explodido' => $data_explodido['explodido'],
 						'entregue' => 0
-						);
-					}
+					);
 				}
 			}
 			
 			foreach($this->totalEntregue() as $data_entregue)
-			{
-				$cont = 0;
-				for($i = 0; $i < count($relatorio_data_html); $i++ )
+			{				
+				if( search_for_value($data_entregue['alimento'], $relatorio_data_html) )
 				{
-					if($relatorio_data_html[$i]['alimento'] == $data_entregue['alimento'])
+					$key = array_search($data_entregue['alimento'], array_column($relatorio_data_html, 'alimento') );
+						
+					if( array_key_exists($key, $relatorio_data_html) )
 					{
-						$relatorio_data_html[$i]['entregue'] += $data_entregue['entregue'];
-						$cont++;
+						$relatorio_data_html[$key]['entregue'] += $data_entregue['entregue'];
 					}
-					
-					if($cont == count($relatorio_data_html) )
-					{
-						$relatorio_data_html[] = array(
+				}
+				else
+				{
+					$relatorio_data_html[] = array(
 						'alimento' => $data_entregue['alimento'],
 						'simulado' => 0,
 						'explodido' => 0,
 						'entregue' => $data_entregue['entregue']
-						);
-					}
+					);
 				}
 			}
-			
 			$relatorio = multiSort($relatorio_data_html, 'alimento');
-					
+			
 				echo "
 					<p class='text-center' id='total'><strong>TOTALIZAÇÃO</strong></p>
 					";
@@ -2085,7 +2081,7 @@ class ListagemRelatoriosModel extends MainModel
 			INNER JOIN agrupamento AS agrs ON agrs.id_agrupamento = cros.fk_aba 
 			INNER JOIN abastecimento AS abas ON agrs.fk_abastecimento = abas.id_abastecimento 
 			INNER JOIN alimentos AS aliments ON resumo.fk_alimento = aliments.id_alimento 
-			WHERE rels.status = 1 AND rels.tipo_alimento = 'Não Perecível'  AND abas.ano = 2018 AND rels.tipo_relatorio = 'POR ABASTECIMENTO'
+			WHERE rels.status = 1 AND rels.tipo_alimento = 'Não Perecível'  AND abas.ano = ? AND rels.tipo_relatorio = 'POR ABASTECIMENTO'
 			GROUP BY aliments.alimento
 			ORDER BY aliments.alimento ASC";
 		

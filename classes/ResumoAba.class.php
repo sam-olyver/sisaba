@@ -16,7 +16,7 @@
 			if( $check != 'text/xml' )
 			{
 				echo "<h1>ARQUIVO INVALIDO<br></h1>";
-				echo "<a href='http://localhost/sisaba/relatorios/novo'>VOLTAR</a>";
+				echo "<a href='../".HOSTNAME."/sisaba/relatorios/novo'>VOLTAR</a>";
 				exit;
 			}
 			

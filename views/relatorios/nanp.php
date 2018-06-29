@@ -28,7 +28,7 @@
 					  <tr>
 						<td colspan="1"></td>
 						<td><?php echo $indice['agrupamento'];?></td>
-						<td><?php echo $indice['abastecimento'];?></td>
+						<td><?php echo $aba; ?></td>
 						<td><?php echo $indice['data_entrega']; ?></td>
 					  </tr>
 					</thead>

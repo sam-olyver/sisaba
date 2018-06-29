@@ -27,8 +27,12 @@
 						  <tr>
 							<td colspan="1"></td>
 							<td><?php echo $indice['periodo']; ?></td>
-							<td><?php echo $indice['agrupamento'] ?></td>
-							<td colspan="4"><?php echo $indice['abastecimento'] ?></td>
+							<td>
+							<?php
+								if($indice['tipo_relatorio'] != 'POR MÊS')
+									echo $indice['agrupamento']; 
+							?></td>
+							<td colspan="4"><?php echo $aba; ?></td>
 						  </tr>
 						  <tr>
 							  <th>Situação Guia+Item</th>
