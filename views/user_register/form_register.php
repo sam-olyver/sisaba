@@ -12,33 +12,33 @@ $modelo->validate_register_form();
 
 			<form action="" method="POST">
 			  <div class="form-group">
-				<label>Nome: </label>
+				<label>Nome </label>
 				<input type="text" class="form-control" name="user_name" required>
 			  </div>
 			  
 			  <div class="form-group">
-				<label>Login:</label>
+				<label>Login </label>
 				<input type="text" class="form-control" name="user" required>
 			  </div>
 			  
 			  <div class="form-group">
-				<label>Senha:</label>
+				<label>Senha </label>
 				<input type="password" class="form-control" name="user_password" required>
 			  </div>
 			  <div class="form-group">
-				<label>Permissões</label>
+				<label>Permissões </label>
 				<select class="form-control" name="user_permissions" required>
-					<option disabled selected>Selecione um opção</option>
-					<option value="apenas_consulta">Apenas consulta</option>
+					<option disabled selected>Selecione um Opção</option>
+					<option value="apenas_consulta">Apenas Consulta</option>
 					<option value="abastecimento, all, adm">Abastecimento</option>
 				</select>
 			  </div>
 			  <div class="form-group">
-				<label>RF: </label>
+				<label>RF </label>
 				<input type="text" class="form-control" name="user_rf" required>
 			  </div>
 			  <div class="form-group">
-				<label>Cargo: </label>
+				<label>Cargo </label>
 				<input type="text" class="form-control" name="user_cargo" required>
 			  </div>
 			  <div class="checkbox">

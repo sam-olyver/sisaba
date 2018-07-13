@@ -9,25 +9,25 @@
 		<div class="box-body">
 			<form>
 			  <div class="form-group">
-				<label for="exampleInputEmail1">Nome: </label>
+				<label for="exampleInputEmail1">Nome </label>
 				<input type="text" class="form-control" value="<?php echo $_SESSION['userdata']['user_name']?>" disabled/>
 			  </div>
 			  <div class="form-group">
-				<label for="exampleInputEmail1">Login:</label>
+				<label for="exampleInputEmail1">Login </label>
 				<input type="text" class="form-control" value="<?php echo $_SESSION['userdata']['user']?>" disabled/>
 			  </div>
 			  
 			  <div class="form-group">
-				<label for="exampleInputEmail1">Função</label>
+				<label for="exampleInputEmail1">Cargo</label>
 				<input type="text" class="form-control" value="<?php echo $_SESSION['userdata']['user_cargo']?>" disabled/>
 			  </div>
 			  <div class="form-group">
-				<label for="exampleInputPassword1">RF:</label>
+				<label for="exampleInputPassword1">RF </label>
 				<input type="text" class="form-control" value="<?php echo $_SESSION['userdata']['user_rf']?>" disabled/>
 			  </div>
 			  <?php foreach($_SESSION['userdata']['user_permissions'] as $permissoes)?>
 			  <div class="form-group">
-				<label for="exampleInputPassword1">Permissões: </label> 
+				<label for="exampleInputPassword1">Permissões </label> 
 				<input type="text" class="form-control" value="<?php echo $permissoes?>" disabled/>
 			  </div>
 			  <div class="form-group">

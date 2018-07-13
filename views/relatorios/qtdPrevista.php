@@ -3,7 +3,7 @@
 
 	<div class="box box-info">
 		<div class="box-header">
-			<h3 class="box-title">Quantidade Prevista de Estoque</h3>
+			<h3 class="box-title">Necessidade de Alimentos Considerando Estoque</h3>
 		</div>
 		
 		<div class="box-body">
@@ -13,7 +13,7 @@
 					<div class="form-group">
 						<label>Ano</label>
 						<select name="ano" class="form-control" required>
-							<option disabled selected>Selecione uma opção</option>
+							<option disabled selected>Selecione uma Opção</option>
 							<?php $modelo->getAnoAbastecimento(); ?>
 						</select>
 					</div>

@@ -13,22 +13,22 @@ $usuario = $modelo->getUSer($this->parametros[0]);
 
 			<form action="" method="POST">
 			  <div class="form-group">
-				<label>ID: #</label>
+				<label>Código</label>
 				<input type="text" class="form-control" name="user_id" value="<?php echo $this->parametros[0]; ?>" disabled>
 			  </div>
 			  <div class="form-group">
-				<label>Nome: </label>
+				<label>Nome </label>
 				<input type="text" class="form-control" name="user_name" required>
 			  </div>
 			  <div class="form-group">
 				<input type="hidden" class="form-control" name="user" value="<?php echo $usuario[0]['user']; ?>" >
 			  </div>
 			  <div class="form-group">
-				<label>Senha:</label>
+				<label>Senha </label>
 				<input type="password" class="form-control" name="user_password" required>
 			  </div>
 			  <div class="form-group">
-				<label>Permissões</label>
+				<label>Permissões </label>
 				<select class="form-control" name="user_permissions" required>
 					<option disabled selected>Selecione um opção</option>
 					<option value="apenas_consulta">Apenas consulta</option>
@@ -36,11 +36,11 @@ $usuario = $modelo->getUSer($this->parametros[0]);
 				</select>
 			  </div>
 			  <div class="form-group">
-				<label>RF: </label>
+				<label>RF </label>
 				<input type="text" class="form-control" name="user_rf" required>
 			  </div>
 			  <div class="form-group">
-				<label>Cargo: </label>
+				<label>Cargo </label>
 				<input type="text" class="form-control" name="user_cargo" required>
 			  </div>
 			  <div class="checkbox">

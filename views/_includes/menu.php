@@ -45,7 +45,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo HOME_URI;?>relatorios/acao/">Consultar relatórios</a></li>
+            <li><a href="<?php echo HOME_URI;?>relatorios/acao/">Consultar Relatórios</a></li>
             <li><a href="<?php echo HOME_URI;?>relatorios/listagemRelatorios/0">Listar Relatórios Ativos</a></li>
 			<li><a href="<?php echo HOME_URI;?>relatorios/listagemRelatoriosDesativados/0">Listar Relatórios Desativados</a></li>
             <li><a href="<?php echo HOME_URI;?>relatorios/resumoAba/">Resumo de Abastecimento</a></li>
@@ -60,7 +60,7 @@
           </ul>
         </li>
 
-        <!-- MENU LATERAL - DROPDOWN 2 -->
+        <!-- MENU LATERAL - SAIDAS 
         <li class="treeview">
           <a href="#">
             <i class="glyphicon glyphicon-list-alt"></i>
@@ -73,17 +73,17 @@
             <li><a href="#">Gerar Saídas de Estoque</a></li>
           </ul>
         </li>
-		
+		-->
 		<li class="treeview">
           <a href="#">
-            <i class="glyphicon glyphicon-wrench"></i> <span>Painel de controle</span>
+            <i class="glyphicon glyphicon-wrench"></i> <span>Painel de Controle</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/sisaba/UserRegister/cadastro">Cadastrar usuário</a></li>
-            <li><a href="/sisaba/UserRegister/listar">Listar usuários</a></li>
+            <li><a href="/sisaba/UserRegister/cadastro">Cadastrar Usuários</a></li>
+            <li><a href="/sisaba/UserRegister/listar">Listar Usuários</a></li>
             <li><a href="/sisaba/UserRegister/logView/0">Log</a></li>
           </ul>
         </li>

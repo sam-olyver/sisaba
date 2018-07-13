@@ -2,7 +2,7 @@
 <div class="content">
 	<div class="box box-info">
 		<div class="box-header">
-			<h3 class="box-title">CONSULTAR RELATÓRIOS DE ABASTECIMENTO</h3>
+			<h3 class="box-title"></h3>
 		</div>
 		<div class="box-body">
 		<!-- Color Picker -->
@@ -11,7 +11,7 @@
 					<div class="form-group">	
 						<label>Alimento</label>
 						<select class="form-control" name="alimento">
-							<option disabled selected>Selecione uma opção</option>
+							<option disabled selected>Selecione uma Opção</option>
 							<?php $modelo->getAlimentos(); ?>
 						</select>
 					</div>
@@ -19,25 +19,25 @@
 					<div class="form-group">
 						<label>Ano</label>
 						<select class="form-control" name="ano">
-							<option disabled selected>Selecione uma opção</option>
+							<option disabled selected>Selecione uma Opção</option>
 							<?php $modelo->getAnoAbastecimento(); ?>
 						</select>
 					</div>
 					<div class="form-group">
 						<label>Abastecimento</label>
 						<select class="form-control" name="abastecimento">
-							<option disabled selected>Selecione uma opção</option>
+							<option disabled selected>Selecione uma Opção</option>
 							<?php $modelo->getDataAbastecimento(false); ?>
 						</select>
 					</div>
 					<div class="form-group">
 						<label>Agrupamento</label>
 						<select class="form-control" name="agrupamento" required>
-							<option disabled selected>Selecione uma opção</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
+							<option disabled selected>Selecione uma Opção</option>
 							<option value="4">4</option>
+							<option value="3">3</option>
+							<option value="2">2</option>
+							<option value="1">1</option>
 						</select>
 					</div>
 					<div class="form-group">

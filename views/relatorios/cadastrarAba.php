@@ -9,12 +9,12 @@
 			<div class="form-group" id="nanp">
 				<form action="" method="POST">
 				  <div class="form-group">
-					<label for="exampleInputAno">Ano:</label>
+					<label for="exampleInputAno">Ano</label>
 					<input type="number" class="form-control" name="ano" required>
 				  </div>
 				  
 				  <div class="form-group">
-					<label for="exampleInputAba">Abastecimento:</label>
+					<label for="exampleInputAba">Abastecimento</label>
 					<input type="text" class="form-control" name="aba" required>
 				  </div>
 				  

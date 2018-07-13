@@ -2,7 +2,7 @@
 <div class="content">
 	<div class="box box-info">
 		<div class="box-header">
-			<h3 class="box-title">CONSULTAR RELATÓRIOS DE ABASTECIMENTO</h3>
+			<h3 class="box-title"></h3>
 		</div>
 		<div class="box-body">
 		<!-- Color Picker -->
@@ -11,7 +11,7 @@
 					<div class="form-group">	
 						<label>Alimento</label>
 						<select class="form-control" name="alimento">
-							<option disabled selected>Selecione uma opção</option>
+							<option disabled selected>Selecione uma Opção</option>
 							<?php $modelo->getAlimentos(); ?>
 						</select>
 					</div>
@@ -19,7 +19,7 @@
 					<div class="form-group">
 						<label>Ano</label>
 						<select class="form-control" name="ano">
-							<option disabled selected>Selecione uma opção</option>
+							<option disabled selected>Selecione uma Opção</option>
 							<?php $modelo->getAnoAbastecimento(); ?>
 						</select>
 					</div>

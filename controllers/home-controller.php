@@ -20,7 +20,7 @@ class HomeController extends MainController
 			header('Location: login');	
 		
 		// Título da página
-		$this->title = 'Bem vindo';
+		$this->title = 'BEM-VINDO';
 		$this->acao = 'Início';
 		
 		// Parametros da função
@@ -45,8 +45,8 @@ class HomeController extends MainController
 		if (!$this->logged_in) 
 			return;	
 		
-		$this->title = 'Perfil';
-		$this->acao = 'Página do Usuário';
+		$this->title = 'PERFIL';
+		$this->acao = 'Dados do Usuário';
 		
 		require ABSPATH . '/views/_includes/header.php';
 		require ABSPATH . '/views/_includes/menu.php';
@@ -59,7 +59,7 @@ class HomeController extends MainController
 		if (!$this->logged_in)
 			header('Location: login');			
 		
-		$this->title = 'Perfil';
+		$this->title = 'PERFIL';
 		$this->acao = 'Alterar senha do Usuário';
 		
 		$parametros = ( func_num_args() >= 1 ) ? func_get_arg(0) : array();

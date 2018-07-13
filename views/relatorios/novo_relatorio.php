@@ -8,20 +8,20 @@
 		<div class="box-body">
 <form action="/sisaba/relatorios/preview" method="POST" enctype="multipart/form-data">
   <div class="form-group">
-    <label for="exampleInputEmail1">Selecione o tipo de relatório</label>
+    <label for="exampleInputEmail1">Selecione um Tipo de Relatório</label>
     <select class="form-control" name="relatorio" required>
-		<option value=" " readonly selected>Selecione uma opção</option>
+		<option value=" " readonly selected>Selecione uma Opção</option>
 		<option value="SimuladoXlsx">Simulado Excel</option>
 		<option value="Nanp">Necessidade de Alimentos sem Considerar Estoque</option>
 		<option value="Nanp">Necessidade de Alimentos Considerando Estoque</option>
-		<option value="ResumoMes">Resumo Totalização por MÊS</option>
-		<option value="ResumoAba">Resumo Totalização por ABA</option>
+		<option value="ResumoMes">Resumo Totalização por Mês</option>
+		<option value="ResumoAba">Resumo Totalização por Aba</option>
 	</select>
   </div>
   <div class="form-group">
   <label for="exampleInputEmail1">Mês</label>
 	<select class="form-control" name="mes">
-		<option value=" " readonly selected>Selecione uma opção</option>
+		<option value=" " readonly selected>Selecione uma Opção</option>
 		<option value="janeiro">Janeiro</option>
 		<option value="fevereiro">Fevereiro</option>
 		<option value="março">Março</option>
@@ -39,12 +39,12 @@
   <div class="form-group">
   <label for="exampleInputEmail1">Ano</label>
 	<select class="form-control" name="ano" required>
-		<option readonly >Selecione uma opção</option>
+		<option readonly >Selecione uma Opção</option>
 		<?php $modelo->getAnoAbastecimento(); ?>
 	</select>
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Período:</label>
+    <label for="exampleInputEmail1">Período</label>
     <input type="date" class="form-control" name="data_inicio" >
   </div>
   
@@ -53,17 +53,17 @@
   </div>
   
    <div class="form-group">
-    <label for="exampleInputEmail1">Selecione o abastecimento</label>
+    <label for="exampleInputEmail1">Selecione o Abastecimento</label>
     <select class="form-control" name="abastecimento" >
-		<option value="0" readonly selected>Selecione uma opção</option>
+		<option value="0" readonly selected>Selecione uma Opção</option>
 		<?php $modelo->getDataAbastecimento();?>	
 	</select>
   </div>
   
    <div class="form-group">
-    <label for="exampleInputEmail1">Selecione o agrupamento</label>
+    <label for="exampleInputEmail1">Selecione o Agrupamento</label>
     <select class="form-control" name="agrupamento" >
-		<option value="0" readonly selected>Selecione uma opção</option>
+		<option value="0" readonly selected>Selecione uma Opção</option>
 		<option value="4">4</option>
 		<option value="3">3</option>
 		<option value="2">2</option>
@@ -72,7 +72,7 @@
   </div>
   
   <div class="form-group">
-    <label for="exampleInputFile">Arquivo relatório</label>
+    <label for="exampleInputFile">Arquivo Relatório</label>
     <input type="file" name="relatorio_upload_file" required>
     <p class="help-block">upload apenas de arquivos xml ou xlsx(no caso do simulado relatório de apenas um agrupamento por vez)!</p>
   </div>

@@ -3,7 +3,7 @@
 
 	<div class="box box-info">
 		<div class="box-header">
-			<h3 class="box-title">CONSULTAR RELATÓRIOS DE ABASTECIMENTO</h3>
+			<h3 class="box-title">Necessidade de Alimentos Sem Considerar Estoque</h3>
 		</div>
 		
 		<div class="box-body">

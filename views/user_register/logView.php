@@ -10,8 +10,8 @@
 					<tr>
 						<th>DATA</th>
 						<th>USUÁRIO</th>
-						<th>TÍTULO ATIVIDADE</th>
-						<th>RESUMO ATIVIDADE</th>
+						<th>TÍTULO DA ATIVIDADE</th>
+						<th>RESUMO DA ATIVIDADE</th>
 					</tr>
 					
 					<?php $modelo->logView(); ?>	

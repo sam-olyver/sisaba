@@ -31,8 +31,8 @@ class RelatoriosController extends MainController
 			return;
 		}
 		
-		$this->title = 'Novo Relatório';
-		$this->acao = 'Adicionar relatório';
+		$this->title = 'NOVO RELATÓRIO';
+		$this->acao = 'Adicionar Relatório';
 		
 		$parametros = ( func_num_args() >= 1 ) ? func_get_arg(0) : array();
 	
@@ -96,7 +96,7 @@ class RelatoriosController extends MainController
 			return;
 		}
 		
-		$this->title = "Abastecimento";
+		$this->title = "ABASTECIMENTO";
 		$this->acao = 'Cadastrar';
 		
 		$parametros = (func_num_args() >= 1) ? func_get_arg(0) : array();
@@ -118,9 +118,9 @@ class RelatoriosController extends MainController
 		
 		$this->permission_required = 'all';
 		
-		$this->title = 'Consultar relatórios';
+		$this->title = 'CONSULTAR RELATÓRIOS';
 		$this->controlador = 'Relatórios';
-		$this->acao = 'Escolha uma ação';
+		$this->acao = 'Escolha uma Opção de Consulta';
 
 		$parametros = ( func_num_args() >= 1) ? func_get_arg(0) : array();
 		$modelo = $this->load_model('relatorios/listagem_relatorios-model');
@@ -138,7 +138,7 @@ class RelatoriosController extends MainController
 		
 		$this->permission_required = 'all';
 		
-		$this->title = 'Resumo de Abastecimento';
+		$this->title = 'RESUMO DE ABASTECIMENTO';
 		$this->controlador = 'Relatórios';
 		$this->acao = 'Consulta';
 		
@@ -157,7 +157,7 @@ class RelatoriosController extends MainController
 		
 		$this->permission_required = 'all'; 
 		
-		$this->title = 'Abastecimento NP';
+		$this->title = 'ABASTECIMENTO NP';
 		$this->controlador = 'Relatórios';
 		$this->acao = 'Consulta';
 		
@@ -177,7 +177,7 @@ class RelatoriosController extends MainController
 		$this->permission_required = 'all';
 		
 		
-		$this->title = 'Abastecimento PER';
+		$this->title = 'ABASTECIMENTO PER';
 		$this->controlador = 'Relatórios';
 		$this->acao = 'Consulta';
 		
@@ -197,7 +197,7 @@ class RelatoriosController extends MainController
 		$this->permission_required = 'all';
 		
 		
-		$this->title = 'Abastecimento FLVO';
+		$this->title = 'ABASTECIMENTO FLVO';
 		$this->controlador = 'Relatórios';
 		$this->acao = 'Consulta';
 		
@@ -217,7 +217,7 @@ class RelatoriosController extends MainController
 		$this->permission_required = 'all';
 		
 		
-		$this->title = 'Listagem de Relatórios';
+		$this->title = 'LISTAGEM DE RELATÓRIOS';
 		$this->controlador = 'Relatórios';
 		$this->acao = 'Consulta';
 		
@@ -242,7 +242,7 @@ class RelatoriosController extends MainController
 		}
 		
 		
-		$this->title = 'Listagem de Relatórios';
+		$this->title = 'LISTAGEM DE RELATÓRIOS';
 		$this->controlador = 'Relatórios';
 		$this->acao = 'Consulta';
 		
@@ -326,8 +326,8 @@ class RelatoriosController extends MainController
 		if (!$this->logged_in) 
 			header('Location: \sisaba/login');
 		
-		$this->title = 'Entregue Mês';
-		$this->acao = 'View';
+		$this->title = 'ENTREGUE MÊS';
+		$this->acao = 'Consulta';
 		
 		$modelo = $this->load_model('relatorios/listagem_relatorios-model');
 		
@@ -343,8 +343,8 @@ class RelatoriosController extends MainController
 		if (!$this->logged_in) 
 			header('Location: \sisaba/login');
 		
-		$this->title = 'Previsto Alterado X Estoque Por Abastecimento';
-		$this->acao = 'View';
+		$this->title = 'PREVISTO ALTERADO X ESTOQUE POR ABASTECIMENTO';
+		$this->acao = 'Consulta';
 		
 		$modelo = $this->load_model('relatorios/listagem_relatorios-model');
 		
@@ -360,8 +360,8 @@ class RelatoriosController extends MainController
 		if (!$this->logged_in) 
 			header('Location: \sisaba/login');
 		
-		$this->title = 'Entregue Anual';
-		$this->acao = 'View';
+		$this->title = 'ENTREGA ANUAL';
+		$this->acao = 'Consulta';
 		
 		$modelo = $this->load_model('relatorios/listagem_relatorios-model');
 		
@@ -376,8 +376,8 @@ class RelatoriosController extends MainController
 		if (!$this->logged_in) 
 			header('Location: \sisaba/login');
 		
-		$this->title = 'Entregue Anual por abastecimento';
-		$this->acao = 'View';
+		$this->title = 'ENTREGA POR ABASTECIMENTO';
+		$this->acao = 'Consultar';
 		
 		$modelo = $this->load_model('relatorios/listagem_relatorios-model');
 		
@@ -392,8 +392,8 @@ class RelatoriosController extends MainController
 		if (!$this->logged_in) 
 			header('Location: \sisaba/login');
 		
-		$this->title = 'Entregue Anual por agrupamento';
-		$this->acao = 'View';
+		$this->title = 'ENTREGA POR AGRUPAMENTO';
+		$this->acao = 'Consulta';
 		
 		$modelo = $this->load_model('relatorios/listagem_relatorios-model');
 		

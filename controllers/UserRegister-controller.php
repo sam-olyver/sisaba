@@ -40,8 +40,8 @@ class UserRegisterController extends MainController
 			return;
 		}
 		
-		$this->title = 'Cadastro de Usuários';
-		$this->acao = 'novo usuário';
+		$this->title = 'CADASTRO DE USUÁRIOS';
+		$this->acao = 'cadastrar';
 		$parametros = ( func_num_args() >= 1 ) ? func_get_arg(0) : array();
 		
 		$modelo = $this->load_model('user-register/user-register-model');
@@ -64,8 +64,8 @@ class UserRegisterController extends MainController
 			return;
 		}
 		
-		$this->title = 'Usuários';
-		$this->acao = 'Editar usuários';
+		$this->title = 'USUÁRIOS';
+		$this->acao = 'Editar e Visualizar';
 		
 		$parametros = ( func_num_args() >= 1 ) ? func_get_arg(0) : array();
 		
@@ -108,7 +108,7 @@ class UserRegisterController extends MainController
 		}
 		
 		
-		$this->title = 'Usuários';
+		$this->title = 'USUÁRIOS';
 		$this->acao = 'Editar usuários';
 		
 		$parametros = ( func_num_args() >= 1 ) ? func_get_arg(0) : array();
@@ -133,7 +133,7 @@ class UserRegisterController extends MainController
 			return;
 		}
 		
-		$this->title = 'Painel de controle - Registro de Log do sistema';
+		$this->title = 'REGISTRO DE LOG DO SISTEMA';
 		$this->acao = 'Log';
 		
 		$parametros = ( func_num_args() >= 1 ) ? func_get_arg(0) : array();

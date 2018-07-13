@@ -28,14 +28,15 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-image: url('assets/_midia/frutas.jpg'); background-size: 100%; background-repeat: no-repeat; ">
 <div class="login-box">
-  <div class="login-logo">
-    <b>SISABA</b>
-  </div>
+  
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Sistema do Núcleo de Gestão de Abastecimento</p>
+  
+    <b style="color: #000; font-size: 32px; "><p class="text-center">SISABA</p></b>
+  
+    <p class="login-box-msg" style="font-size: 14px;">Sistema do Núcleo de Gestão de Abastecimento</p>
 
     <form action="" method="POST">
       <div class="form-group has-feedback">
@@ -43,7 +44,7 @@
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="senha" name="userdata[user_password]" required />
+        <input type="password" class="form-control" placeholder="Senha" name="userdata[user_password]" required />
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -85,7 +86,7 @@
     });
   });
 </script>
-		<footer class="footer text-center" style="background-color: #fff;position: fixed;left: 0;bottom: 0;width: 100%;">
+		<footer class="footer text-center" style="background-color: #fff;position: fixed;left: 0;bottom: 0; width: 100%;">
 			<strong>2018 | SME CODAE - PREFEITURA DE SÃO PAULO</strong>  
 			<strong><p>Desenvolvido por<a href="<?php echo GIT_URL; ?>" target="_blank"> Samuel de Oliveira Rodrigues</a> | Núcleo de Gestão de Abastecimento</p></strong> 
 			<strong><p>Todos os direitos reservados</p></strong>

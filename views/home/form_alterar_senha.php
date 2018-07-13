@@ -11,11 +11,11 @@
 			<form action="" method="POST">
   <input type="hidden" name="user_id" value="<?php echo $_SESSION['userdata']['user_id'];?>" />	
   <div class="form-group">
-    <label>Nova senha: </label>
+    <label>Nova senha </label>
 	<input type="password" class="form-control" name="senha" required />
   </div>
   <div class="form-group">
-    <label>Confirma senha:</label>
+    <label>Confirma senha </label>
     <input type="password" class="form-control" name="confirma_senha" required />
   </div>
   <div class="checkbox">

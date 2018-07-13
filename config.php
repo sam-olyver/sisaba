@@ -26,22 +26,22 @@ define( 'VIEW_DIR', HOME_URI . 'views/dashboard/');
 //freenom (gmail) - ip
 
 //Nome do HOST do 
-define( 'HOSTNAME', 'localhost');
+define( 'HOSTNAME', '10.110.103.20');
 
 // Nome do DB
 define( 'DB_NAME', 'sisaba' );
 
 // Usuário do DB
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'samuel' );
 
 // Senha do DB
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'b0168@ijb#7' );
 
 // Charset da conexão PDO
 define( 'DB_CHARSET', 'utf8' );
 
 // Se você estiver desenvolvendo, modifique o valor para true
-define( 'DEBUG', true );
+define( 'DEBUG', false );
 
 /**
  * Não edite daqui em diante
