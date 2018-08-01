@@ -26,7 +26,7 @@ define( 'VIEW_DIR', HOME_URI . 'views/dashboard/');
 //freenom (gmail) - ip
 
 //Nome do HOST do 
-define( 'HOSTNAME', '10.110.103.20');
+define( 'HOSTNAME', '10.110.103.229');
 
 // Nome do DB
 define( 'DB_NAME', 'sisaba' );

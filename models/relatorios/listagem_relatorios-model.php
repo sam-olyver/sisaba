@@ -986,7 +986,7 @@ class ListagemRelatoriosModel extends MainModel
 									'ajustada' => number_format($data['qtd_ajustadasn'], 2, ',', '.'),
 									
 									'porcentagem' => 
-									number_format( $porcentual = ( $data['qtd_previstasn'] != 0 ) ? ( ($data['qtd_ajustadasn'] / $data['qtd_previstasn']) -1 ) * 100 : 0, 2 )		
+									number_format( $porcentual = ( $data['qtd_previstasn'] != 0 ) ? ( ($data['qtd_ajustadasn'] / $data['qtd_previstasn']) - 1 )  : 0, 2 )		
 								);
 							}
 							else if( ! empty($data['alimentosn']) )
@@ -1000,7 +1000,7 @@ class ListagemRelatoriosModel extends MainModel
 									'ajustada' => number_format($data['qtd_ajustadasn'], 2, ',', '.'),
 									'porcentagem' => 
 									
-									number_format( $porcentual = ( $data['qtd_previstasn'] != 0 ) ? ( ($data['qtd_ajustadasn'] / $data['qtd_previstasn']) -1 ) * 100 : 0, 2 )		
+									number_format( $porcentual = ( $data['qtd_previstasn'] != 0 ) ? ( ($data['qtd_ajustadasn'] / $data['qtd_previstasn']) - 1 ) : 0, 2 )		
 								);
 							}
 						}
@@ -1675,7 +1675,7 @@ class ListagemRelatoriosModel extends MainModel
 					<td>".number_format($data['qtd_prevista'],2,',','.')."</td>
 					<td>".number_format($data['estoque_unidade'],2,',','.')."</td>
 					<td>".
-					number_format( $porcentual = ( $data['estoque_unidade'] == 0 ) ? 0 : ($data['estoque_unidade'] / $data['qtd_prevista']), 2,',','.')
+					number_format( $porcentual = ( $data['estoque_unidade'] == 0 ) ? 0 : ($data['estoque_unidade'] / $data['qtd_prevista']) * 100, 2,',','.')
 					."</td>
 				</tr>					
 				";
