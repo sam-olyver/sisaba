@@ -22,12 +22,12 @@ class RelatoriosController extends MainController
     public function novo()
     {
 		if(!$this->logged_in)
-			header('Location: \sisaba/login');
+			header('Location: login');
 		
 		$check_user = chk_array($_SESSION['userdata'], 'user_permissions');
 		
 		if( ! in_array('abastecimento',$check_user) ){
-			require_once '..' . VIEW_DIR . 'pages/examples/404.php';
+			require_once ABSPATH.'/' . VIEW_DIR . 'pages/examples/404.php';
 			return;
 		}
 		
@@ -48,11 +48,11 @@ class RelatoriosController extends MainController
     public function preview()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');	
+			header('Location:  login');	
 		
 		$check_user = chk_array($_SESSION['userdata'], 'user_permissions');
 		if( ! in_array('abastecimento',$check_user) ){
-			require_once '..' . VIEW_DIR . 'pages/examples/404.php';
+			require_once ABSPATH .'/' . VIEW_DIR . 'pages/examples/404.php';
 			return;
 		}
 		
@@ -88,11 +88,11 @@ class RelatoriosController extends MainController
 	
 	public function novoAba(){
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');	
+			header('Location: login');	
 		
 		$check_user = chk_array($_SESSION['userdata'], 'user_permissions');
 		if( ! in_array('abastecimento',$check_user) ){
-			require_once '..' . VIEW_DIR . 'pages/examples/404.php';
+			require_once ABSPATH .'/' . VIEW_DIR . 'pages/examples/404.php';
 			return;
 		}
 		
@@ -114,7 +114,7 @@ class RelatoriosController extends MainController
     public function acao()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');
+			header('Location: login');
 		
 		$this->permission_required = 'all';
 		
@@ -134,7 +134,7 @@ class RelatoriosController extends MainController
 	public function resumoAba()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');	
+			header('Location: login');	
 		
 		$this->permission_required = 'all';
 		
@@ -153,7 +153,7 @@ class RelatoriosController extends MainController
 	public function abastecimentoNp()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');
+			header('Location: login');
 		
 		$this->permission_required = 'all'; 
 		
@@ -172,7 +172,7 @@ class RelatoriosController extends MainController
 	public function abastecimentoPER()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');	
+			header('Location: login');	
 		
 		$this->permission_required = 'all';
 		
@@ -192,7 +192,7 @@ class RelatoriosController extends MainController
 	public function abastecimentoFLVO()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');	
+			header('Location: login');	
 		
 		$this->permission_required = 'all';
 		
@@ -212,7 +212,7 @@ class RelatoriosController extends MainController
 	public function listagemRelatorios()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');	
+			header('Location: login');	
 		
 		$this->permission_required = 'all';
 		
@@ -231,13 +231,13 @@ class RelatoriosController extends MainController
 	public function listagemRelatoriosDesativados()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');	
+			header('Location: login');	
 		
 		$this->permission_required = 'abastecimento';
 		
 		$check_user = chk_array($_SESSION['userdata'], 'user_permissions');
 		if( ! in_array('abastecimento',$check_user) ){
-			require_once '..' . VIEW_DIR . 'pages/examples/404.php';
+			require_once ABSPATH .'/' . VIEW_DIR . 'pages/examples/404.php';
 			return;
 		}
 		
@@ -257,7 +257,7 @@ class RelatoriosController extends MainController
 	public function exibirRelatorio()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');	
+			header('Location: login');	
 		
 		$this->title = 'Exibir Relatório';
 		$this->acao = 'View';
@@ -279,7 +279,7 @@ class RelatoriosController extends MainController
 	public function viewRelatorio()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');	
+			header('Location: login');	
 		
 		$this->title = 'Exibir Relatório';
 		$this->acao = 'View';
@@ -301,7 +301,7 @@ class RelatoriosController extends MainController
 	public function exibirEntregueMes()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');
+			header('Location: login');
 		
 		$this->title = 'Exibir Relatório';
 		$this->acao = 'View';
@@ -324,7 +324,7 @@ class RelatoriosController extends MainController
 	public function entregueMes()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');
+			header('Location: login');
 		
 		$this->title = 'ENTREGUE MÊS';
 		$this->acao = 'Consulta';
@@ -341,7 +341,7 @@ class RelatoriosController extends MainController
 	public function qtdPrevista()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');
+			header('Location: login');
 		
 		$this->title = 'PREVISTO ALTERADO X ESTOQUE POR ABASTECIMENTO';
 		$this->acao = 'Consulta';
@@ -358,7 +358,7 @@ class RelatoriosController extends MainController
 	public function entregaAnual()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');
+			header('Location: login');
 		
 		$this->title = 'ENTREGA ANUAL';
 		$this->acao = 'Consulta';
@@ -374,7 +374,7 @@ class RelatoriosController extends MainController
 	public function entregaAnualAba()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');
+			header('Location: login');
 		
 		$this->title = 'ENTREGA POR ABASTECIMENTO';
 		$this->acao = 'Consultar';
@@ -390,7 +390,7 @@ class RelatoriosController extends MainController
 	public function entregaAnualAgr()
 	{
 		if (!$this->logged_in) 
-			header('Location: \sisaba/login');
+			header('Location: login');
 		
 		$this->title = 'ENTREGA POR AGRUPAMENTO';
 		$this->acao = 'Consulta';

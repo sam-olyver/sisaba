@@ -35,8 +35,8 @@ $lista = $modelo->get_user_list();
 			 <td> <?php echo implode( ',', unserialize( $fetch_userdata['user_permissions'] ) ) ?> </td>
 			 
 			 <td> 
-			 <a href="/sisaba/UserRegister/edit/<?php echo $fetch_userdata['user_id'] ?>" class="btn btn-default">Editar</a>
-			 <a href="/sisaba/UserRegister/del/<?php echo $fetch_userdata['user_id'] ?>" onclick="if(confirm('Deseja excluir este usuário?'))return true;else return false;" class="btn btn-default">Excluir</a>
+			 <a href="/UserRegister/edit/<?php echo $fetch_userdata['user_id'] ?>" class="btn btn-default">Editar</a>
+			 <a href="/UserRegister/del/<?php echo $fetch_userdata['user_id'] ?>" onclick="if(confirm('Deseja excluir este usuário?'))return true;else return false;" class="btn btn-default">Excluir</a>
 			 </td>
 			 
 			 </tr>

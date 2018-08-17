@@ -54,7 +54,7 @@
       <div class="row">
         
 		<div class="col-xs-4">
-          <a href="/sisaba/login/" class="btn btn-primary btn-block btn-flat">Voltar</a>
+          <a href="/login/" class="btn btn-primary btn-block btn-flat">Voltar</a>
         </div>
         <!-- /.col -->
         <div class="col-xs-4">

@@ -256,15 +256,16 @@ class UserLogin
 		// Verifica se a URL da HOME está configurada
 		if ( defined( 'HOME_URI' ) ) {
 			// Configura a URL de login
-			$login_uri  = '/sisaba/login';
+			$login_uri  = 'login';
 			
 			// A página em que o usuário estava
 			$_SESSION['goto_url'] = urlencode( $_SERVER['REQUEST_URI'] );
 			
 			// Redireciona
-			echo '<meta http-equiv="Refresh" content="0; url=' . $login_uri . '">';
+			//echo '<meta http-equiv="Refresh" content="0; url=' . $login_uri . '">';
 			//echo '<script type="text/javascript">window.location.href = "' . $login_uri . '";</script>';
-			//header('Location: login');
+			
+			return header('Location: /login');
 		}
 		
 		return;

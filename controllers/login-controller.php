@@ -18,7 +18,7 @@ class LoginController extends MainController
 		if ($this->logged_in) 
 			header('Location: home');	
 		else
-			require '..' . VIEW_DIR . 'pages/examples/login.php';
+			require ABSPATH.'/'. VIEW_DIR . 'pages/examples/login.php';
 
     } // index
 	

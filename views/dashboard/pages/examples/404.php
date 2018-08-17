@@ -3,7 +3,7 @@ if ( ! defined('ABSPATH'))
 	exit; 
 
 if (!$this->logged_in) 
-	header('Location: \sisaba/login');	
+	header('Location: /login');	
 
 ?>
 <!DOCTYPE html>
@@ -87,10 +87,10 @@ if (!$this->logged_in)
               <!-- Menu -->
               <li class="user-footer">
               <div class="pull-left">
-                  <a href="/sisaba/profile/" class="btn btn-default btn-flat">Profile</a>
+                  <a href="/profile/" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="/sisaba/home/sair" class="btn btn-default btn-flat">Sair</a>
+                  <a href="/home/sair" class="btn btn-default btn-flat">Sair</a>
                 </div>
               </li>
             </ul>

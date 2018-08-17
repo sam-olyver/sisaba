@@ -44,7 +44,7 @@
 		</div>
 		
 		<div id="acao">
-			<a href="/sisaba/relatorios/listagemRelatorios/0" class="btn btn-default">Voltar</a>
+			<a href="/relatorios/listagemRelatorios/0" class="btn btn-default">Voltar</a>
 			<form method="POST" style="display: inline;">
 				<input type="hidden" name="check" value="true" />
 				<input type="hidden" name="status" value="1" />

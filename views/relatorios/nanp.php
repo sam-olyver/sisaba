@@ -74,7 +74,7 @@
 			</div>
 			<div id="acao">
 							
-					<a href="/sisaba/relatorios/novo" class="btn btn-default">Voltar</a>
+					<a href="/relatorios/novo" class="btn btn-default">Voltar</a>
 			</div>
 		</div><!-- /.box-body -->
 	</div><!-- /.box-info -->	

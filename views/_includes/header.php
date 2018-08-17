@@ -98,10 +98,10 @@
               <!-- Menu -->
               <li class="user-footer">
               <div class="pull-left">
-                  <a href="/sisaba/home/profile/" class="btn btn-default btn-flat">Perfil</a>
+                  <a href="/home/profile/" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="/sisaba/home/sair" class="btn btn-default btn-flat">Sair</a>
+                  <a href="/home/sair" class="btn btn-default btn-flat">Sair</a>
                 </div>
               </li>
             </ul>

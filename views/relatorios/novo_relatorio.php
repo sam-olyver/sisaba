@@ -6,7 +6,7 @@
 		</div>
 		
 		<div class="box-body">
-<form action="/sisaba/relatorios/preview" method="POST" enctype="multipart/form-data">
+<form action="/relatorios/preview" method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="exampleInputEmail1">Selecione um Tipo de Relatório</label>
     <select class="form-control" name="relatorio" required>

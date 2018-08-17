@@ -16,12 +16,12 @@ class UserRegisterController extends MainController
 	
     public function index(){	
 		if(!$this->logged_in)
-			return header('Location: \sisaba/login');
+			return header('Location: login');
 		
 		$check_user = chk_array($_SESSION['userdata'], 'user_permissions');
 		
 		if( ! in_array('abastecimento',$check_user) ){
-			require_once '..' . VIEW_DIR . 'pages/examples/404.php';
+			require_once ABSPATH.'/' . VIEW_DIR . 'pages/examples/404.php';
 			return;
 		}
 		
@@ -31,12 +31,12 @@ class UserRegisterController extends MainController
 	public function cadastro()
 	{
 		if(!$this->logged_in)
-			return header('Location: \sisaba/login');
+			return header('Location: login');
 		
 		$check_user = chk_array($_SESSION['userdata'], 'user_permissions');
 		
 		if( ! in_array('abastecimento',$check_user) ){
-			require_once '..' . VIEW_DIR . 'pages/examples/404.php';
+			require_once ABSPATH.'/' . VIEW_DIR . 'pages/examples/404.php';
 			return;
 		}
 		
@@ -55,12 +55,12 @@ class UserRegisterController extends MainController
 	public function listar()
 	{
 		if(!$this->logged_in)
-			return header('Location: \sisaba/login');
+			return header('Location: login');
 		
 		$check_user = chk_array($_SESSION['userdata'], 'user_permissions');
 		
 		if( ! in_array('abastecimento',$check_user) ){
-			require_once '..' . VIEW_DIR . 'pages/examples/404.php';
+			require_once ABSPATH.'/' . VIEW_DIR . 'pages/examples/404.php';
 			return;
 		}
 		
@@ -80,12 +80,12 @@ class UserRegisterController extends MainController
 	public function del()
 	{
 		if(!$this->logged_in)
-			return header('Location: \sisaba/login');
+			return header('Location: login');
 		
 		$check_user = chk_array($_SESSION['userdata'], 'user_permissions');
 		
 		if( ! in_array('abastecimento',$check_user) ){
-			require_once '..' . VIEW_DIR . 'pages/examples/404.php';
+			require_once ABSPATH.'/' . VIEW_DIR . 'pages/examples/404.php';
 			return;
 		}
 		
@@ -98,7 +98,7 @@ class UserRegisterController extends MainController
 	public function edit()
 	{
 		if(!$this->logged_in)
-			return header('Location: \sisaba/login');
+			return header('Location: login');
 		
 		$check_user = chk_array($_SESSION['userdata'], 'user_permissions');
 		
@@ -120,16 +120,15 @@ class UserRegisterController extends MainController
 		require ABSPATH . '/views/user_register/form_update.php';
 		require ABSPATH . '/views/_includes/footer.php';		
 	}
-	
 	public function logView()
 	{
 		if(!$this->logged_in)
-			return header('Location: \sisaba/login');
+			return header('Location: login');
 		
 		$check_user = chk_array($_SESSION['userdata'], 'user_permissions');
 		
 		if( ! in_array('abastecimento',$check_user) ){
-			require_once '..' . VIEW_DIR . 'pages/examples/404.php';
+			require_once ABSPATH.'/' . VIEW_DIR . 'pages/examples/404.php';
 			return;
 		}
 		

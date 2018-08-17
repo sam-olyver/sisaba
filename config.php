@@ -7,7 +7,7 @@
  * Version
  * versao, sub-versao, alteracao, mes, ano
  */
-define('VERSION', '1.0.6.18');
+define('VERSION', '1.0.9.18');
  
  //link github
 define('GIT_URL', 'https://github.com/sam-olyver');
@@ -19,23 +19,24 @@ define( 'ABSPATH', dirname( __FILE__ ) );
 define( 'UP_ABSPATH', ABSPATH . '/assets/_uploads/' );
 
 // URL da home
-define( 'HOME_URI',	'/sisaba/' );
+define( 'HOME_URI',	'/' );
 
 define( 'VIEW_DIR', HOME_URI . 'views/dashboard/');
-
 //freenom (gmail) - ip
 
 //Nome do HOST do 
-define( 'HOSTNAME', '10.110.103.229');
+define( 'HOSTNAME', '10.49.19.102:8080');
+
+define( 'DB_HOSTNAME', '10.49.19.102');
 
 // Nome do DB
 define( 'DB_NAME', 'sisaba' );
 
 // Usuário do DB
-define( 'DB_USER', 'samuel' );
+define( 'DB_USER', 'fabio' );
 
 // Senha do DB
-define( 'DB_PASSWORD', 'b0168@ijb#7' );
+define( 'DB_PASSWORD', 'pai231065' );
 
 // Charset da conexão PDO
 define( 'DB_CHARSET', 'utf8' );

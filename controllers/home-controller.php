@@ -10,7 +10,7 @@ class HomeController extends MainController
 
 	public $login_required = true;
 	public $permission_required = 'all';
-	//public $logged_in;
+	public $logged_in;
 	public $controlador = 'Home';
 
 	
@@ -30,14 +30,14 @@ class HomeController extends MainController
 		
 		require ABSPATH . '/views/_includes/header.php';
 		require ABSPATH . '/views/_includes/menu.php';
-		require '..' . VIEW_DIR . 'index.php';
+		require ABSPATH.'/'. VIEW_DIR . 'index.php';
 		require ABSPATH . '/views/_includes/footer.php';
 		
     } // index
 	
 	public function sair()
 	{
-		$this->logout(true);	
+		return $this->logout(true);	
 	}
 	
 	public function profile()

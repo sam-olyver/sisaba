@@ -31,7 +31,7 @@
 				<input type="text" class="form-control" value="<?php echo $permissoes?>" disabled/>
 			  </div>
 			  <div class="form-group">
-				<a href="/sisaba/home/alterarSenha/" class="btn btn-default">Alterar minha senha</a>
+				<a href="/home/alterarSenha/" class="btn btn-default">Alterar minha senha</a>
 			  </div>
 			</form>
 		</div>

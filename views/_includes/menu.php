@@ -20,7 +20,7 @@
             </span>
           </a>
 		  <ul class="treeview-menu">
-            <li><a href="/sisaba/home/">Início</a></li>
+            <li><a href="/home/">Início</a></li>
           </ul>
         </li>
 		<li class="treeview">
@@ -82,9 +82,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/sisaba/UserRegister/cadastro">Cadastrar Usuários</a></li>
-            <li><a href="/sisaba/UserRegister/listar">Listar Usuários</a></li>
-            <li><a href="/sisaba/UserRegister/logView/0">Log</a></li>
+            <li><a href="/UserRegister/cadastro">Cadastrar Usuários</a></li>
+            <li><a href="/UserRegister/listar">Listar Usuários</a></li>
+            <li><a href="/UserRegister/logView/0">Log</a></li>
           </ul>
         </li>
 		

@@ -4,6 +4,7 @@ if ( ! defined('ABSPATH')) exit;
  
 // Inicia a sessão
 session_start();
+ob_start();
 
 // Verifica o modo para debugar
 if ( ! defined('DEBUG') || DEBUG === false ) {
@@ -20,11 +21,11 @@ if ( ! defined('DEBUG') || DEBUG === false ) {
 	
 }
 
+//echo ABSPATH;
 // Funções globais
 require_once ABSPATH . '/functions/global-functions.php';
-
+require_once ABSPATH . '/classes/Mvc.class.php';
 
 // Carrega a aplicação
 $Mvc = new Mvc();
-
 

@@ -10,8 +10,8 @@ class MyPdo extends PDO
 	/** DB properties */
 	public $host      = 'localhost', // Host da base de dados 
 	       $db_name   = 'sisaba',    // Nome do banco de dados
-	       $password  = '',          // Senha do usuário da base de dados
-	       $user      = 'root',      // Usuário da base de dados
+	       $password  = 'pai231065',          // Senha do usuário da base de dados
+	       $user      = 'fabio',      // Usuário da base de dados
 	       $charset   = 'utf8',      // Charset da base de dados
 	       $pdo       = null,        // Nossa conexão com o BD
 	       $error     = null,        // Configura o erro
@@ -42,7 +42,7 @@ class MyPdo extends PDO
 		// Configura as propriedades novamente.
 		// Se você fez isso no início dessa classe, as constantes não serão
 		// necessárias. Você escolhe...
-		$this->host     = defined( 'HOSTNAME'    ) ? HOSTNAME    : $this->host;
+		$this->host     = defined( 'DB_HOSTNAME' ) ? DB_HOSTNAME : $this->host;
 		$this->db_name  = defined( 'DB_NAME'     ) ? DB_NAME     : $this->db_name;
 		$this->password = defined( 'DB_PASSWORD' ) ? DB_PASSWORD : $this->password;
 		$this->user     = defined( 'DB_USER'     ) ? DB_USER     : $this->user;
