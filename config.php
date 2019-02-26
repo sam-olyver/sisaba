@@ -33,10 +33,10 @@ define( 'DB_HOSTNAME', '10.49.19.102');
 define( 'DB_NAME', 'sisaba' );
 
 // Usuário do DB
-define( 'DB_USER', 'fabio' );
+define( 'DB_USER', 'localhost' );
 
 // Senha do DB
-define( 'DB_PASSWORD', 'pai231065' );
+define( 'DB_PASSWORD', '' );
 
 // Charset da conexão PDO
 define( 'DB_CHARSET', 'utf8' );
